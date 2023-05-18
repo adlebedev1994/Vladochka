@@ -1,0 +1,82 @@
+body {
+    background-color: #000;
+    color: yellow;
+} 
+@media (min-width: 481px) and (max-width:768px) {
+            body {
+                background-color: yellow;
+            }
+        }
+@media (min-width:769px) {
+            body {
+                background-color: #333;
+                color: yellow;
+            }
+        }  
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    color: yellow;
+}
+p{
+    font-family: Roboto;
+    color: #aba997;
+}
+.blink{
+        width:300px;
+        height: 100px;
+        background-color: magenta;
+        padding: 15px;  
+        text-align: center;
+        line-height: 50px;
+        margin-left: 500px;
+        margin-top: 200px;
+}
+span{
+        font-size: 3em;
+        padding-top: 2em;
+        font-family: Roboto;
+        color: white;
+        animation: blink 3s linear;
+    }
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+.text {
+  position: relative;
+  width: max-content;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: #333;
+  display: block;
+  animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
